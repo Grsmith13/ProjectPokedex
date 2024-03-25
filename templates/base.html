@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <button class="btn btn-outline-primary me-2" type="button" id="logout-btn"
+                            hidden>Logout</button>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('labeler') }}">Labeler</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('researcher_home') }}">Researcher Home</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{{ url_for('user_home') }}">User Home</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('user_page') }}">User Page</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('viewTags') }}">View Tags</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('researchView') }}">Researcher View</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('download') }}">Download Page</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('single_labeler') }}">single Page</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+                <h1 class="text-center navbar-brand mx-auto text-center">Project Pokedex</h1>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="{{ url_for('login') }}" class="btn btn-outline-primary me-2" id="login-btn">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-primary" type="button" id="signup-btn">Sign Up</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="cat-button"></div>
+    <audio id="cat-sound">
+        <source src="{{ url_for('static', filename='misc/cat-sound.mp3') }}" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        {% block body %}{% endblock %}
+    </div>
+
+    <!--Bootstrap javascript bundle-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--:3c-->
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/cat.js') }}"></script>
+
+</body>
+
+</html>

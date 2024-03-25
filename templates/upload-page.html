@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+<body class="bg-dark">
+	<div class="d-flex justify-content-center align-items-center vh-100">
+		<div class="col-md-6 card">
+			<div class="card-header">
+				<h2 class="text-center">Upload</h2>
+			</div>
+			<div class="card-body">
+				<form id="upload-form">
+					<div class="form-group">
+						<label for="upload-field">File</label>
+						<input type="file" class="form-control-file" name="upload" accept=".zip" id="upload-field">
+					</div>
+					<div class="form-group">
+						<label for="data-type">Data Type</label>
+						<select class="form-control" id="data-type">
+							<option value="image">Image</option>
+							<option value="audio">Audio</option>
+							<option value="video">Video</option>
+							<option value="text">Text</option>
+						</select>
+					</div>
+					<div class="d-flex justify-content-end align-items-center">
+						<button type="button" class="btn btn-primary" onclick="uploadZip()">Upload</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/upload-page.js') }}"></script>
+{% endblock %}

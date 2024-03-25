@@ -1,0 +1,31 @@
+/* 
+    This is the styling for the Capstone title "Project Pokedex" 
+    Color, font-size, and font-family are up to taste. 
+    The positioning is important not to change as it make sure the text stays centered. 
+*/
+.navbar-brand {
+    font-size: 2.5rem;
+    color: blue !important;
+    /* the !important makes sure the cyborg theme does not overide it */
+    font-family: 'Times';
+    font-family: "Times New Roman", Times, serif;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#cat-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+img.cat-image {
+    max-width: 100px;
+    max-height: 100px;
+}

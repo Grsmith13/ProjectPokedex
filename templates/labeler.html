@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+<body class="bg-dark" onload="pageLoad()">
+    <div class="align-items-center">
+        <div class="d-flex justify-content-center align-items-center vh-100">
+            <div class="card p-4" id="divFind">
+                <div class="text-center mb-4">
+                    <h1>Color Labeling</h1>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="p-4">
+                        <div id="divFind1">
+                            <img class="id-of-img-tag1" src="" alt="img">
+                        </div>
+                        <div id="divFind1">
+                            <select name="tag-list" id="tag-list1" class="form-select">
+                                <option value="Choose a tag">Choose a tag</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <div id="divFind2">
+                            <img class="id-of-img-tag2" src="" alt="img">
+                        </div>
+                        <div id="divFind1">
+                            <select name="tag-list" id="tag-list2" class="form-select">
+                                <option value="Choose a tag">Choose a tag</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="p-4">
+                        <div id="divFind3">
+                            <img class="id-of-img-tag3" src="" alt="img">
+                        </div>
+                        <div id="divFind1">
+                            <select name="tag-list" id="tag-list3" class="form-select">
+                                <option value="Choose a tag">Choose a tag</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <div id="divFind4">
+                            <img class="id-of-img-tag4" src="" alt="img">
+                        </div>
+                        <div id="divFind1">
+                            <select name="tag-list" id="tag-list4" class="form-select">
+                                <option value="Choose a tag">Choose a tag</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center mt-4">
+                    <button class="btn btn-primary" onclick="submitButton()">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/labeler-page.js') }}"></script>
+
+{% endblock %}

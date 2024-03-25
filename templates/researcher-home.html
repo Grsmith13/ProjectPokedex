@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<body class="bg-dark">
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="col-md-6 card">
+            <div class="card-header">
+                <h2 class="text-center">Researcher</h2>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <a href="{{ url_for('download') }}" class="btn btn-primary btn-block">Download and view
+                            Datasets</a>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <a href="{{ url_for('upload') }}" class="btn btn-primary btn-block">Upload Datasets</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}

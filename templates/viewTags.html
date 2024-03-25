@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+<body class="bg-dark">
+  <div class="align-items-center">
+    <div class="d-flex justify-content-center align-items-center vh-100" id="divContainer">
+      <div class="col-4 card" id="divFind">
+        <div class="card-header">
+          <h2 class="col-12 text-center">Tags</h2>
+        </div>
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-center divRow">
+            <p class="col-6">File</p>
+            <img src="" id="image" onload="loadImage()" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/viewTags.js') }}"></script>
+
+{% endblock %}

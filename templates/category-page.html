@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block head %}
+{% endblock %}
+{% block body %}
+    <body class="bg-dark">
+      <div class = "align-items-center">
+        <div class=" d-flex justify-content-center align-items-center vh-100" id="divContainer">
+          <div class="col-6 card" id="divFind">
+            <div class="card-header">
+              <h2 class="col-12 text-center">Project Pokédex</h2>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center divRow">
+                <p class ="col-4">Categories:</p>
+                <b1 id="categoryList"></b1>
+              </div>
+              <div class="d-flex justify-content-between align-items-center divRow">
+                <p class ="col-4"></p>
+                        <select id="datasets">
+                        </select>
+                        <input type="text" name="category" id="category-field" class="category-form-field" placeholder="Category">
+                        <div class="d-flex justify-content-end align-items-center divRow">
+                          <button class="btn btn-primary col-12" onclick="addCategory()">Add Category</button>	
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'js/category-page.js') }}"></script>
+    {% endblock %}
+</html>

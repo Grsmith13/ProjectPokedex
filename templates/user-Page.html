@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block head %}
+{% endblock %}
+{% block body %}
+
+<body class="bg-dark">
+	<div class="container d-flex justify-content-center align-items-center vh-100">
+		<div class="col-md-6 card">
+			<div class="card-header">
+				<h2 class="text-center">Profile</h2>
+			</div>
+			<div class="card-body">
+				<div class="row mb-2">
+					<div class="col-md-5">
+						<p class="font-weight-bold">Name:</p>
+					</div>
+					<div class="col-md-7">
+						<p id="output1"></p>
+					</div>
+				</div>
+				<div class="row mb-2">
+					<div class="col-md-5">
+						<p class="font-weight-bold">Username:</p>
+					</div>
+					<div class="col-md-7">
+						<p id="output2"></p>
+					</div>
+				</div>
+				<div class="row mb-2">
+					<div class="col-md-5">
+						<p class="font-weight-bold">Email:</p>
+					</div>
+					<div class="col-md-7">
+						<p id="output3"></p>
+					</div>
+				</div>
+				<div class="row mb-2">
+					<div class="col-md-5">
+						<p class="font-weight-bold">Password:</p>
+					</div>
+					<div class="col-md-7">
+						<p id="output4"></p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 mb-3">
+						<button class="btn btn-primary btn-block"
+							onclick="window.location.href = 'changePassword.html';">Edit Password</button>
+					</div>
+					<div class="col-md-6 mb-3">
+						<button class="btn btn-primary btn-block"
+							onclick="window.location.href = 'editUserPage.html';">Edit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="{{ url_for('static', filename = 'js/profile.js') }}"></script>
+	<script>
+		func();
+	</script>
+</body>
+{% endblock %}
+
+</html>

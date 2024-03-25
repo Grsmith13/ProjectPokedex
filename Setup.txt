@@ -1,0 +1,3 @@
+Install the required dependencies by running pip install -r requirements.txt.
+Flask run to set up the local host.
+Click on the local host addresss to go to the page. 

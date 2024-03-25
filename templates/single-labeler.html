@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+
+<body class="bg-dark" onload="pageLoad()">
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <div class="col-5 card py-4">
+            <div class="d-flex justify-content-center align-items-center">
+                <h1>Labeling</h1>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="p-4 w-4">
+                    <div id="divFind1">
+                        <img class="id-of-img-tag1" src="" alt="img">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="p-4 w-4">
+                    <div id="divFind3">
+                        <input type="text" id="inputTag" name="inputTag">
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <button class="btn btn-primary px-4" onclick="submitButton()">Update</button>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block head %}
+{% endblock %}
+{% block body %}
+
+<div class="container-fluid">
+  <div class="row justify-content-center align-items-center vh-100">
+    <div class="col-4 card" id="divFind">
+      <div class="card-header">
+        <h2 class="text-center">Download</h2>
+      </div>
+      <div class="card-body">
+        <div class="form-group row justify-content-between align-items-center">
+          <label class="col-3 col-form-label">Dataset:</label>
+          <div class="col-6">
+            <select id="dataset-selector" class="form-control">
+            </select>
+          </div>
+        </div>
+        <div class="form-group row justify-content-end">
+          <div class="col-9">
+            <button type="button" class="btn btn-primary btn-lg" onclick="loadDatasets()">List Datasets</button>
+            <button type="button" class="btn btn-primary btn-lg" onclick="getDataset()">Get Dataset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/download-page.js') }}"></script>
+{% endblock %}
+
+</html>
